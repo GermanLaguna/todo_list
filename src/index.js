@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import todoApp from './reducers'
 import App from './components/App'
 import './index.css';
+import registerServiceWorker from './registerServiceWorker';
 
 let store = createStore(todoApp)
 
@@ -13,4 +14,5 @@ render(
     <App />
   </Provider>,
   document.getElementById('root')
-)
+);
+registerServiceWorker();
